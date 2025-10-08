@@ -1,0 +1,5 @@
+1. Install Live Server extension in VsCode.
+
+2. On file index.html with right click choose "Open with Llive Server".
+
+NOTE: Init the project on window dimension 1900x1040 or bigger, otherwise user-interface will be not position ok.
