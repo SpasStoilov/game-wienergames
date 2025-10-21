@@ -1,4 +1,13 @@
 export const reelsSettings = {
+    /**
+     * Reels Container
+    */
+    reelsContainerX: -790,
+    reelsContainerY: 50,
+    reelsContainerLabel: "reels-container",
+    /**
+     * Reels Assets
+    */
     reelsFramePosition: {
        x: 980,
        y: 300

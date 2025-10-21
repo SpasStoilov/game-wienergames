@@ -1,6 +1,6 @@
 export const userSettings = {
-    viewPosY: 900,
-    viewPosX: 1000,
+    viewPosY: 800,
+    viewPosX: 200,
     playBtnScale: 0.5,
     totalWinAmount: 100,
     bet:0,

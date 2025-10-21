@@ -9,17 +9,23 @@ import { userSettings as userSet } from "../game-settings/user.js";
 export class ReelsComponent{
     parent = null;
     view;
+    reelsContainer;
 
     constructor(){
         this.view = constructorObject.Container();
+        this.reelsContainer = constructorObject.Container();
         this.view.label = reelSet.reelAssetLabel
+        this.reelsContainer.label = reelSet.reelsContainerLabel
+        this.reelsContainer.x = reelSet.reelsContainerX
+        this.reelsContainer.y = reelSet.reelsContainerY
     }
     init(parent){
         this.parent = parent
         this.createReelsFrame()
         this.createReels()
         this.setMaks()
-        this.parent.addChild(this.view)
+        this.reelsContainer.addChild(this.view)
+        this.parent.addChild(this.reelsContainer)
     }
     createReelsFrame(){
         this.reelsFrame = constructorObject.Sprite(appSet.BACKGROUNDS_REELS[reelSet.frameAssetlabel])
@@ -27,7 +33,7 @@ export class ReelsComponent{
         this.reelsFrame.width = reelSet.reelsFrameWidth
         this.reelsFrame.height = reelSet.reelsFrameHeight
         this.reelsFrame.position.set(reelSet.reelsFramePosition.x, reelSet.reelsFramePosition.y)
-        this.parent.addChild(this.reelsFrame)
+        this.reelsContainer.addChild(this.reelsFrame)
     }
     setMaks(){
         const mask = constructorObject.Graphics()
@@ -40,7 +46,7 @@ export class ReelsComponent{
         );
         mask.fill(reelSet.mask.fill);
         this.view.mask = mask
-        this.parent.addChild(mask)
+        this.reelsContainer.addChild(mask)
     }
     createReels(){
         for(let i of Array.from({ length: reelSet.numberOfReels }, (_, i) => i)){
