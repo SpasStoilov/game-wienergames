@@ -1,5 +1,5 @@
 export const userSettings = {
-    viewPosY: 800,
+    viewPosY: 500,
     viewPosX: 200,
     playBtnScale: 0.5,
     totalWinAmount: 100,
@@ -32,8 +32,8 @@ export const userSettings = {
      * Total Win
      */
     totalWinName: "total-win-amount",
-    totalWinX: 45,
-    totalWinY:-700,
+    totalWinX: 60,
+    totalWinY:-450,
     totalWinScale:1.5,
     totalWinAnchor:0.5,
     /**

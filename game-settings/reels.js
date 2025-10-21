@@ -3,7 +3,7 @@ export const reelsSettings = {
      * Reels Container
     */
     reelsContainerX: -790,
-    reelsContainerY: 50,
+    reelsContainerY: -200,
     reelsContainerLabel: "reels-container",
     /**
      * Reels Assets
